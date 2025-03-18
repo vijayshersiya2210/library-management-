@@ -57,7 +57,7 @@ tree.grid(row=3, column=0, columnspan=3, pady=10, padx=10)
 
 # Apply Treeview Styling
 style = ttk.Style()
-style.configure("Treeview.Heading", font=("Arial", 11, "bold"), background="#FF69B4", foreground="white")
+style.configure("Treeview.Heading", font=("Arial", 11, "bold"), background="white", foreground="black")
 style.configure("Treeview", background="white", foreground="black", rowheight=25)
 style.map("Treeview", background=[("selected", "#F08080")])  # Light Coral when selected
 
