@@ -9,7 +9,8 @@ connector = mysql.connector.connect(
     host="localhost",
     user="root",
     password="root",
-    database="librarydb"
+    database="librarydb",
+    charset="utf8"
 )
 cursor = connector.cursor()
 
@@ -80,7 +81,7 @@ def clear_and_display():
 root = Tk()
 root.title('Library Management System')
 root.geometry('1010x530')
-root.resizable(0, 0)
+
 root.configure(bg="#FFC0CB")  # Pink background
 
 bk_name = StringVar()
@@ -92,7 +93,7 @@ available = IntVar(value=0)  # Default to 0 (unavailable)
 style = ttk.Style()
 style.configure("TButton", font=("Arial", 10, "bold"), padding=5, background="#FF69B4")  # Hot Pink Buttons
 style.configure("Treeview", font=("Arial", 10), rowheight=25)
-style.configure("Treeview.Heading", font=("Arial", 11, "bold"), background="#FF69B4", foreground="white")  # Hot Pink Headers
+style.configure("Treeview.Heading", font=("Arial", 11, "bold"), background="white", foreground="black")  # Hot Pink Headers
 
 # Left Section (Form)
 left_frame = Frame(root, bg="#F08080", padx=10, pady=10)  # Light Coral
